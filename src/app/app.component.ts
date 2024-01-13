@@ -5,10 +5,9 @@ import { UserServices } from './services/userservices';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers:[UserServices]
 })
 export class AppComponent implements OnInit{
-  users : any = [];
+  users : {name:string;status:string}[] = [];
   title = 'user-service';
   constructor(private UserServices : UserServices){}
 
